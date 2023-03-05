@@ -1,9 +1,11 @@
 package com.rspsi.tools;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+import com.jagex.Client;
 import javafx.scene.paint.Color;
 import com.jagex.map.object.GameObject;
 import com.jagex.map.object.ObjectGroup;
@@ -18,6 +20,9 @@ public class StepsBuilder {
     private static final int STEP_SIZE = 2; // The size of each step in tiles
     private static final int STEP_HEIGHT_DIFFERENCE = 1; // The difference in height between each step
     private static final int STAIRCASE_ID = 117; // The ID of the staircase object to spawn
+
+    public StepsBuilder() {
+    }
 
     public static void buildStairs() throws Exception {
         Client client = Client.getSingleton();
@@ -74,3 +79,6 @@ public class StepsBuilder {
         int lastPosition = isXDirection ? tiles.get(0).positionY : tiles.get(0).positionX;
         for (SceneTile tile : tiles) {
             int currentPosition = isXDirection ? tile.positionY : tile
+
+    public static void buildSteps() {
+    }

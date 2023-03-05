@@ -479,6 +479,14 @@ public class MainController {
 
 	}
 
+	public MenuItem getGenerateStairsBtn() {
+		return generateStairsBtn;
+	}
+
+	public void setGenerateStairsBtn(MenuItem generateStairsBtn) {
+		this.generateStairsBtn = generateStairsBtn;
+	}
+
 	public void onLoad(MainWindow application) {
 		initializeToolButtons();
 		loadTabs(application);
@@ -635,9 +643,9 @@ public class MainController {
 			}
 		});
 		
-				generateStairsBtn.setOnAction(evt -> {
-		try {
-			StepsBuilder.buildSteps();
+		generateStairsBtn.setOnAction(evt -> {
+			try {
+			StepsBuilder.buildStairs();
 		} catch (Exception e) {
 			FXDialogs.showError(application.getStage().getOwner(),"Error while generating stairs!", "Message: " + e.getMessage());
 		}

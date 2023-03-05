@@ -526,6 +526,8 @@
                               </MenuItem>
                               <MenuItem fx:id="generateBridgeBtn" mnemonicParsing="false" text="Generate bridge" />
                               <SeparatorMenuItem mnemonicParsing="false" />
+                              <MenuItem fx:id="generateStairsBtn" mnemonicParsing="false" text="Generate steps" />                              
+                              <SeparatorMenuItem mnemonicParsing="false" />
                               <MenuItem fx:id="forceMapUpdateBtn" mnemonicParsing="false" text="Force map update" />
                               <MenuItem fx:id="fixHeightsBtn" mnemonicParsing="false" text="Reset tile heights" />
                               <SeparatorMenuItem mnemonicParsing="false" />
