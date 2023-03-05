@@ -22,6 +22,7 @@ import com.rspsi.misc.ToolType;
 import com.rspsi.options.Options;
 import com.rspsi.swatches.SwatchType;
 import com.rspsi.tools.BridgeBuilder;
+import com.rspsi.tools.StepsBuilder;
 import com.rspsi.util.AlwaysSelectToggleGroup;
 import com.rspsi.util.ChangeListenerUtil;
 import com.rspsi.util.FXDialogs;
@@ -360,6 +361,9 @@ public class MainController {
 	private MenuItem generateBridgeBtn;
 	
 	@FXML
+	private MenuItem generateStairsBtn;
+	
+	@FXML
 	private VBox root;
 	
 
@@ -630,6 +634,14 @@ public class MainController {
 				FXDialogs.showError(application.getStage().getOwner(),"Error while generating bridge!", "Message: " + e.getMessage());
 			}
 		});
+		
+				generateStairsBtn.setOnAction(evt -> {
+		try {
+			StepsBuilder.buildSteps();
+		} catch (Exception e) {
+			FXDialogs.showError(application.getStage().getOwner(),"Error while generating stairs!", "Message: " + e.getMessage());
+		}
+	});
 
 		Options.currentTool.addListener((observable, oldVal, newVal) -> {
 
