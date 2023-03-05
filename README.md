@@ -142,3 +142,47 @@ height="2.5506944444444444in"}
 ![A screenshot of a computer Description automatically generated with
 medium confidence](media/image13.png){width="6.268055555555556in"
 height="4.026388888888889in"}
+
+
+
+- Generate...
+
+    - Getter and Setter
+
+        - Generates getter and setter methods for fields in a class
+
+    - Constructor
+
+        - Generates a constructor method for a class
+
+    - equals() and hashCode()
+
+        - Generates `equals()` and `hashCode()` methods for a class
+
+    - toString()
+
+        - Generates a `toString()` method for a class
+
+    - Delegate Methods
+
+        - Generates delegate methods for a class
+
+    - Builder
+
+        - Generates a builder pattern for a class
+
+    - Test methods
+
+        - Generates test methods for a class
+
+    - Delegate Methods
+
+        - Generates delegate methods for a class
+
+    - Implementation methods
+
+        - Generates method stubs for an interface
+
+    - Parcelable
+
+        - Generates `Parcelable` methods for a class
