@@ -1,19 +1,16 @@
 package com.rspsi.tools;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import org.major.map.RenderFlags;
-
-import com.jagex.Client;
-import com.jagex.Client.LoadState;
+import javafx.scene.paint.Color;
 import com.jagex.map.object.GameObject;
 import com.jagex.map.object.ObjectGroup;
 import com.jagex.map.object.ObjectType;
 import com.jagex.map.tile.SceneTile;
 import com.jagex.util.BitFlag;
+import com.rspsi.misc.RenderFlags;
 import com.rspsi.options.Options;
 
 public class StepsBuilder {
