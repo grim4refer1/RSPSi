@@ -62,32 +62,40 @@ subprojects {
         sha256 = "49381508ecb02b3c173368436ef71b24c0d4418ad260e6cc98becbcf4b345406"
     }
 
-    compileJava {
-        options.fork = true
-        options.incremental = true
-    }
-
-//    javafx {
-//        version = "11.0.1"
-//        modules = [ 'javafx.fxml', 'javafx.controls', 'javafx.media', 'javafx.swing']
-//    }
-
-
+compileJava {
+    options.fork = true
+    options.incremental = true
 }
+
+// Add the "build all jars" task
+task buildAllJars(type: GradleBuild) {
+    tasks = subprojects.collect { ":${it.name}:jar" }
+}
+build.dependsOn buildAllJars
+
+// javafx {
+//     version = "11.0.1"
+//     modules = [ 'javafx.fxml', 'javafx.controls', 'javafx.media', 'javafx.swing']
+// }
+
 repositories {
     mavenCentral()
 }
+
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 }
+
 compileKotlin {
     kotlinOptions {
         jvmTarget = "1.8"
     }
 }
+
 compileTestKotlin {
     kotlinOptions {
         jvmTarget = "1.8"
     }
 }
+
 
